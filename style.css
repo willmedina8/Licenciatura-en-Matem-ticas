@@ -1,1 +1,56 @@
+/* style.css */
 
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f8ff;
+  color: #333;
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  color: #004080;
+}
+
+.malla {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(150px, 1fr));
+  gap: 15px;
+  padding: 20px;
+  justify-items: center;
+}
+
+.curso {
+  background-color: #cce5ff;
+  border: 2px solid #004080;
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 14px;
+  text-align: center;
+  user-select: none;
+}
+
+.curso:hover {
+  background-color: #99ccff;
+}
+
+.curso.aprobado {
+  background-color: #b3ffb3;
+  border-color: #339933;
+  color: #005500;
+}
+
+.curso.bloqueado {
+  background-color: #e0e0e0;
+  color: #999;
+  border-color: #ccc;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .malla {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
