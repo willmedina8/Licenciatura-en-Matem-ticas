@@ -1,56 +1,52 @@
-/* style.css */
-
 body {
   font-family: Arial, sans-serif;
-  background-color: #f0f8ff;
-  color: #333;
-  text-align: center;
+  background-color: #f2f9ff;
+  color: #003366;
   padding: 20px;
 }
 
 h1 {
-  color: #004080;
-}
-
-.malla {
-  display: grid;
-  grid-template-columns: repeat(6, minmax(150px, 1fr));
-  gap: 15px;
-  padding: 20px;
-  justify-items: center;
-}
-
-.curso {
-  background-color: #cce5ff;
-  border: 2px solid #004080;
-  padding: 15px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: 0.3s;
-  font-size: 14px;
   text-align: center;
-  user-select: none;
+  color: #0056b3;
+  margin-bottom: 30px;
 }
 
-.curso:hover {
-  background-color: #99ccff;
+#malla-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
 }
 
-.curso.aprobado {
-  background-color: #b3ffb3;
-  border-color: #339933;
-  color: #005500;
+.semestre {
+  background-color: #cce6ff;
+  border: 2px solid #3399ff;
+  border-radius: 10px;
+  padding: 15px;
 }
 
-.curso.bloqueado {
-  background-color: #e0e0e0;
-  color: #999;
-  border-color: #ccc;
+.semestre h2 {
+  text-align: center;
+  color: #003366;
+  margin-bottom: 15px;
+}
+
+.materia {
+  background-color: #e6f3ff;
+  border: 1px solid #3399ff;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 5px 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.materia:hover {
+  background-color: #cce0ff;
+}
+
+.materia.locked {
+  background-color: #d9d9d9;
+  color: #777;
+  border-color: #aaa;
   cursor: not-allowed;
-}
-
-@media (max-width: 768px) {
-  .malla {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
